@@ -8,9 +8,10 @@ import os
 import tempfile
 import gzip
 
-RESULTS_FILE = "results.xlsx"
 TRUSTED_SOURCE_IP = None  # add your trusted source IP here
-
+RESULT_DATE = datetime.now().strftime("%Y%m%d")
+RESULT_NAME = "hostmaster_reports"
+RESULTS_FILE = RESULT_NAME+"_"+RESULT_DATE+".xlsx"
 
 try:
     source_folder = Path(sys.argv[1])
